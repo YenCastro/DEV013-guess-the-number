@@ -43,7 +43,7 @@ def check_guess(player_guess, secret_number):
     if player_guess == secret_number:
         return True, 'Congratulations! The number entered is correct.'
     elif player_guess < secret_number:
-        return False, "Ups! It seems the number is lower, keep trying"
+        return False, "Ups! It seems the number is lower, keep trying."
     else:
         return False, "Ups! It seems the number is higher, keep trying."
 
@@ -53,6 +53,7 @@ def check_guess(player_guess, secret_number):
 def game_play():
     """Función principal que lleva a cabo la lógica del juego."""
     print("Welcome to guess the number, let's play!")
+    #Secret_number se hizo para inicializar el número secreto del juego, que es esencial para que el juego comience.
     secret_number = random_number()
     user_attempts = []
     comp_attempts = []
@@ -92,7 +93,7 @@ def play_again():
         else:
             print("Invalid input. Please enter 'y' or 'n'.")
 
-            
+
 #comprueba si este archivo de Python se está ejecutando directamente desde la línea de comandos.
 if __name__ == "__main__":
     game_play()
